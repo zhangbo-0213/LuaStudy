@@ -5,3 +5,8 @@ print(type(type))		  	  --function
 print(type(true))			  --boolean
 print(type(nil))              --nil
 print(type(type(nil)))		  --string
+
+name="bobo"
+print(name)
+name=nil
+print(name)
