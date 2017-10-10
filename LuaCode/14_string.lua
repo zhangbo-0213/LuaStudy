@@ -1,7 +1,7 @@
 --[[
 ×Ö·û´®
 1.¶¨Òå
---''  ""  [ [ ] ]¶àĞĞ×Ö·û´®¶¨Òå¡
+--''  ""  [ [ ] ]¶àĞĞ×Ö·û´®¶¨Òå
 
 2.×ªÒå×Ö·û
 \n  »»ĞĞ
@@ -27,5 +27,37 @@ str4=string.gsub(str,'b','Z',1)  --ºóÃæµÄÊı×Ö±íÊ¾¿ÉÒÔÌæ»»µÄ×î¶à´ÎÊı
 print(str4)
 
 --×Ö·û´®²éÕÒ
-index=string.find(str,"bobo",10)  --·µ»Ø²éÕÒ×Ö·û´®µÄË÷ÒıÖµ£¬×îºóµÄ²ÎÊı±íÊ¾¿ªÊ¼²éÕÒµÄÆğÊ¼Î»ÖÃs
+index=string.find(str,"bobo",10)  --·µ»Ø²éÕÒ×Ö·û´®µÄË÷ÒıÖµ£¬×îºóµÄ²ÎÊı±íÊ¾¿ªÊ¼²éÕÒµÄÆğÊ¼Î»ÖÃ
 print(index)
+
+--×Ö·û´®·­×ª
+str5=string.reverse(str)
+print(str5)
+
+--¸ñÊ½»¯×Ö·û´®
+num1=5
+num2=10
+str6=string.format("¼Ó·¨ÔËËã£º %d+%d=%d",num1,num2,(num1+num2))
+print(str6)
+
+date=2;month=1;year=2017
+print(string.format("ÈÕÆÚ¸ñÊ½»¯: %02d/%02d/%04d",date,month,year))
+
+--×Ö·ûÓëÕûÊıÖ®¼ä×ª»»
+print(string.char(97,98,99,100))
+--Êä³öabcd
+print(string.byte('ABCD'))
+--Êä³ö65
+print(string.byte('ABCD',2))    --Ä¬ÈÏ´ÓµÚÒ»¸ö×Ö·ûÊä³ö,Ò²¿ÉÒÔÖ¸¶¨Î»ÖÃ
+--Êä³ö66
+
+--È¡µÃ×Ö·û´®³¤¶È
+length=string.len('abc')
+length2=#'abc'
+print(length,length2)
+--Êä³ö  3  3
+
+--×Ö·û´®¿½±´
+str7=string.rep('abcd',2)
+print(str7)
+--Êä³öabcdabcd
