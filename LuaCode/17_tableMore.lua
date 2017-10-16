@@ -48,3 +48,33 @@ for k,v in pairs(mytable) do
 	print(k,v)
 end
 --输出   Lua C# JAVA C++ C PHP Python JavaScript
+
+--排序（字母按照ASCII码进行排序,大写字母排在前，小写字母排在后)
+print("排序前")
+for k,v in pairs(mytable) do
+	print(k,v)
+end
+print("排序后")
+table.sort(mytable)
+for k,v in pairs(mytable) do
+	print(k,v)
+end
+
+mytable2={23,45,678,39,47,482,37,49}
+table.sort(mytable2)
+for k,v in pairs(mytable2)  do
+	print(k,v)
+end
+
+--取得最大值
+function getMax(mytable)
+	local temp=0
+	for k,v in pairs(mytable) do
+		if v>=temp then
+			temp=v
+		end
+	end
+	return temp
+end
+
+print("最大值为 ："..getMax(mytable2))
