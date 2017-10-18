@@ -84,3 +84,38 @@ mytable4=setmetatable(mytable4,metatable4)
 mytable4[5]="C++"
 print(mytable4[5])          --输出nil
 print(newtable2[5])         --输出C++
+
+--给表添加操作符[__add对应 两个表相加的操作]
+mytable5={"Lua","C#","Python","Go"}
+newtable5={"PHP","Java"}
+mymetatable5={
+__add=function(tab,newtab)
+	local length=#tab
+	for k,v in pairs(newtab) do
+		tab[length+k]=v
+	end
+	return tab
+end
+}
+mytable5=setmetatable(mytable5,mymetatable5)
+v1=newtable5+mytable5
+
+for k,v in pairs(v1) do
+	print(k,v)
+end
+--两个表使用+操作符，只要其中一个表的元表定义了__add的元方法就可以进行相加操作
+
+--__Call元方法，可以将表作为函数使用
+mytable6={"Lua","C#","Python","Go"}
+mymetatable6={
+__call=function(tab,arg)
+	print(arg)
+	return arg
+end
+}
+mytable6=setmetatable(mytable6,mymetatable6)
+print(mytable6("Java"))
+--[[输出
+Java   --__call调用输出一次
+Java
+--]]
