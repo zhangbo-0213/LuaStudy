@@ -119,3 +119,5 @@ print(mytable6("Java"))
 Java   --__call调用输出一次
 Java
 --]]
+
+
